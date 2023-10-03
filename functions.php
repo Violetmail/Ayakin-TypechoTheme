@@ -173,7 +173,6 @@ function themeConfig($form)
 
     $form->addInput($ICP_show);
     
-
     $sidebarBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox(
         'sidebarBlock',
         [
