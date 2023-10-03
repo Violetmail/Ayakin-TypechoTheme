@@ -199,6 +199,26 @@ function themeConfig($form)
 
     $form->addInput($additionalNav);
     
+    $footer_nocomment = new \Typecho\Widget\Helper\Form\Element\Text(
+        'footer_nocomment',
+        null,
+        '',
+        _t('评论关闭的文字显示'),
+        _t('评论关闭后会显示此文本，为空则默认显示“评论已关闭”。')
+    );
+
+    $form->addInput($footer_nocomment);
+    
+    $ICP_show = new \Typecho\Widget\Helper\Form\Element\Text(
+        'ICP_show',
+        null,
+        '',
+        _t('网站ICP备案号'),
+        _t('默认为空，填写后将置于页脚底部。')
+    );
+
+    $form->addInput($ICP_show);
+    
     $additionalCss = new \Typecho_Widget_Helper_Form_Element_Textarea(
         'additionalCss',
         null,
@@ -244,3 +264,17 @@ function getCategoryies($returnArray = false)
     return $text;
   }
 }
+
+/*
+function themeFields($layout)
+{
+    $logoUrl = new \Typecho\Widget\Helper\Form\Element\Text(
+        'logoUrl',
+        null,
+        null,
+        _t('站点LOGO地址'),
+        _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO')
+    );
+    $layout->addItem($logoUrl);
+}
+*/
