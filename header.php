@@ -34,7 +34,7 @@
 <header id="header" class="clearfix">
     <div class="container">
         <div class="flex row" style="line-height: 0;align-items: center;">
-            <div class="site-name col-mb-12 col-9" style="line-height:normal"> <!-- 设置了默认行高，避免网站名过长产生重叠 -->
+            <div class="site-name col-mb-12 col-9" style="line-height: normal;">
                 <?php if (!empty(getOptions()->logoUrl)): ?>
                     <a id="logo" href="<?php $this->options->siteUrl(); ?>">
                         <img src="<?php getOptions()->logoUrl() ?>" alt="<?php $this->options->title() ?>"/>
@@ -87,10 +87,9 @@
             </div>
         </div><!-- end .row -->
     </div>
-
 </header><!-- end #header -->
 
-        <nav id="mobile-nav-menu" class="clearfix" role="navigation" >
+        <nav id="mobile-nav-menu" class="clearfix" role="navigation">
             <a<?php if ($this->is('index')): ?> class="current"<?php endif; ?>
                 href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
             <?php \Widget\Contents\Page\Rows::alloc()->to($pages); ?>

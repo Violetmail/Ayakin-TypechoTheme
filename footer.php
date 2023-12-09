@@ -27,13 +27,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <br>
         <?php echo '<a href="https://beian.miit.gov.cn/">' . getOptions()->ICP_show . '</a>'; ?>
     <?php endif; ?>
-    
-    <!-- 添加备案号 -->
-    <?php if(!empty(getOptions()->ICP_show)) : ?>
-        <br>
-        <?php echo '<a href="https://beian.miit.gov.cn/">' . getOptions()->ICP_show . '</a>'; ?>
-    <?php endif; ?>
-
 </footer><!-- end #footer -->
 
 <?php $this->footer(); ?>
